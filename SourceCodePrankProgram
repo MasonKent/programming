@@ -1,0 +1,214 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Media;
+
+//Created in Visual Studio
+// Application Name: Broken PC
+//Description: Application generates erratic mouse and keyboard movements and input and generates systems sounds and fake dialogs to confuse the user
+//Source: created through Barnacules "codegasm" series, code differs slightly from his video but follows almost all the same basic setup
+
+namespace Prank
+{
+    class Program
+    {
+        public static Random _random = new Random();
+        /// <summary>
+        /// Entry point
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main(string[] args)
+        {
+            Console.WriteLine("PC Repair | Application by: Nosam");
+            //Creates new threads
+            Thread thread0 = new Thread(new ThreadStart(Thread0));
+            Thread thread3 = new Thread(new ThreadStart(Thread3));
+            Thread thread4 = new Thread(new ThreadStart(Thread4));
+            Thread thread5 = new Thread(new ThreadStart(Thread5));
+            Thread thread6 = new Thread(new ThreadStart(Thread6));
+            //start threads after X seconds
+            DateTime _future = DateTime.Now.AddSeconds(5);
+            while (_future > DateTime.Now)
+            {
+                Thread.Sleep(1000);
+            }
+            //start threads
+            thread0.Start();
+            thread3.Start();
+            thread4.Start();
+            thread5.Start();
+            thread6.Start();
+            //if set to console application then these play to suggest it is a virus remover program
+            #region virus detect
+            Thread thread1 = new Thread(new ThreadStart(Thread1));
+            thread1.Start();
+            Thread thread2 = new Thread(new ThreadStart(Thread2));
+            thread2.Start();
+            //Closes program after X seconds (currently 15seconds)
+            DateTime future = DateTime.Now.AddSeconds(15);
+            while ( future > DateTime.Now)
+            {
+                Thread.Sleep(1000);
+            }
+            SystemSounds.Exclamation.Play();
+            //if in console mode writes line that the program is closing
+            Console.WriteLine("Closing...");
+            //aborts threads closing the application
+            thread1.Abort();
+            thread2.Abort();
+            thread3.Abort();
+            thread4.Abort();
+            thread5.Abort();
+            thread6.Abort();
+            thread0.Abort();
+            #endregion
+        }
+        //Thread 0, currently does nothing 
+        static void Thread0()
+        {
+            while (true)
+            {
+            }
+        }
+        //Thread1, shows line when in console mode
+        static void Thread1()
+        {
+            while (true)
+            {
+                Console.WriteLine("Reparing...");
+                Thread.Sleep(1000);
+            }
+        }
+        //Thread2, shows line when in console mode
+        static void Thread2()
+        {
+            while (true)
+            {
+                Random rFind = new Random();
+                int rInt = rFind.Next(500, 15000);
+                int range = 100;
+                double rDouble = rFind.NextDouble() * range;
+                Console.WriteLine("Warning!");
+                Console.WriteLine("Virus detected...");
+                Console.WriteLine("Warning!");
+                Thread.Sleep(rInt);
+            }
+        }
+        //Actual "virus" mode
+        #region "virus"
+        //Broken Mouse
+        public static void Thread3()
+        {
+
+            int moveX = 0;
+            int moveY = 0;
+
+            while (true)
+            {
+                //20% chance after each sleep time to change cursor position
+                if (_random.Next(100) > 80)
+                {
+                    Cursor.Position = new System.Drawing.Point(Cursor.Position.X - moveX, Cursor.Position.Y - moveY);
+                    //Change mouse cursor position
+                    moveX = _random.Next(20) - 10;
+                    moveY = _random.Next(20) - 10;
+                }
+
+                Thread.Sleep(50);
+            }
+        }
+        //Broken Keyboard
+        public static void Thread4()
+        {
+            while (true)
+            {   
+                //10% chance of "typing" key
+            if (_random.Next(100) > 90)
+                {
+                    //Picks random key from the alphabet and sends it
+                    char key = (char)(_random.Next(25) + 65);
+                    //decide if upper or lower case
+                    if (_random.Next(2) == 0)
+                    {
+                        key = Char.ToLower(key);
+                    }
+                    
+                    SendKeys.SendWait(key.ToString());
+                }
+               
+
+                Thread.Sleep(_random.Next(500));
+            }
+        }
+        //Broken Sound
+        public static void Thread5()
+        {
+            while (true)
+            {
+                //5% chance of playing sound
+                if(_random.Next(100) > 95)
+                {
+                    //Picks random sound if sound is played
+                    switch (_random.Next(5))
+                    {
+                        case 0:
+                            SystemSounds.Asterisk.Play();
+                            break;
+                        case 1:
+                            SystemSounds.Beep.Play();
+                            break;
+                        case 2:
+                            SystemSounds.Exclamation.Play();
+                            break;
+                        case 3:
+                            SystemSounds.Hand.Play();
+                            break;
+                        case 4:
+                            SystemSounds.Question.Play();
+                            break;
+
+                    }               
+                }
+                Thread.Sleep(500);
+            }
+        }
+        //Broke Popup
+        public static void Thread6()
+        {
+            while (true)
+            {
+                //10% chance of playing
+                if (_random.Next(100) > 90)
+                {
+                    switch(_random.Next(6))
+                    {
+                        //picks random "popup error message"
+                        case 0:
+                            MessageBox.Show("Can't Connect to the Internet, Disconnecting...", "Windows", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        case 1:
+                            MessageBox.Show("Internet Explorer has Stopped Working", "Microsoft", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                            break;
+                        case 2:
+                            MessageBox.Show("Minecraft has quit running, please update java", "Minecraft", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                            break;
+                        case 3:
+                            MessageBox.Show("Your system is running low on resources", "Microsoft Windows", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                            break;
+                        case 4:
+                            MessageBox.Show("Virus Detected?", "Windows Defender", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                            break;
+                    }
+                }
+                
+                Thread.Sleep(5000);
+            }
+        }
+        #endregion
+    }
+}
