@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ElDewritoDownloader.exe" version="1.0.0.0" publicKeyToken="0ca0e4460fd402c9" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ElDewritoDownloader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ElDewritoDownloader.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElDewritoDownloader.exe" size="12224">
+      <assemblyIdentity name="ElDewritoDownloader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>xNp1qbOOCNB4+xxw3Qlesoo+ofZdAeYTg3uAK2opBOw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="7z.dll" size="1646592">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qrdNTa/N8eea9OiQ/1usaZBUvkc2npwOVN4JkwCuJHU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="7za.dll" size="384000">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HRJi4EUe9BBqkvolQgnns6dmQGN9oxNbR/OAur/MsSw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="7za.exe" size="1142272">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>g9rhPvFXwcuV54R9wAuqOZ8p6kcn8kIU1JQyKW+EH7k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="7zxa.dll" size="208896">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KLlOZGylHwE95zPfmNImQ/X9pQCO5VwBFazAqHL9SZ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ElDewritoDownloader.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=MASON\MasonKent" issuerKeyHash="b782de3f92edbfb0fc7c2c8a50ea7712e803726b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>rjWU8/8oZAd580LBzr6cDQgKkmiCGITUHJHalLbIWBs=</DigestValue></Reference></SignedInfo><SignatureValue>fI8OdoVysaokrq0QVLdqCsYCYRgwMfQG+ZREo9ugCYvahov9zbpq9E5A39MvEf5SnnDtwQvxMJaWH41pF4xIgJzTJYZ87TnaMe0tObspNNU/UeZtTlh69ACtYaJ/GpdhNNf5Xp76/VXxm5HPRrhExJThFxkU2Jbv0M0EojMnd5E=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wwnNvMhz1KAY7YYAetDued4ubHbfJWFhCnepIcY8/YAr81ljBRIl6f86ZhPXbA55TvIWHb0vVEcEBFcYSKUrMSKfj/eBdFsWFMVwovPjfKdVxGCMDTlhq4MGULEiPdne/C4PgU0tz23gny5ka9aFg9lhFZzVtAoAQnb7qzvw2Uk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1b58c8b694da911cd484188268920a080d9cbecec142f379076428fff39435ae" Description="" Url=""><as:assemblyIdentity name="ElDewritoDownloader.exe" version="1.0.0.0" publicKeyToken="0ca0e4460fd402c9" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MASON\MasonKent</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>h8IMDJTOL6auZsiBn+5YsB5UhUp0eSceT/Lvyv9az9I=</DigestValue></Reference></SignedInfo><SignatureValue>I2l8JBcsoUMq10Ou4Jbk5BHQcokfV1MVYbQeB7b2i/Vs5j4QUFRvx7dkXzRXr9S9N+lPbXmNoFtozrRGHN5T6gWd09NZS++ynDbIYFJUGdkQmDvd53AN5lFZKHC9mmFviT0nzoCCGXBO6XrrwLQ7jdCm/5mPuIeDSmSpzqPlovY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wwnNvMhz1KAY7YYAetDued4ubHbfJWFhCnepIcY8/YAr81ljBRIl6f86ZhPXbA55TvIWHb0vVEcEBFcYSKUrMSKfj/eBdFsWFMVwovPjfKdVxGCMDTlhq4MGULEiPdne/C4PgU0tz23gny5ka9aFg9lhFZzVtAoAQnb7qzvw2Uk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQatO0vb2LjoFADIN++3dyrDANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ATQBBAFMATwBOAFwATQBhAHMAbwBuAEsAZQBuAHQwHhcNMTgwNTAxMjA1NjI2WhcNMTkwNTAyMDI1NjI2WjApMScwJQYDVQQDHh4ATQBBAFMATwBOAFwATQBhAHMAbwBuAEsAZQBuAHQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMMJzbzIc9SgGO2GAHrQ7nneLmx23yVhYQp3qSHGPP2AK/NZYwUSJen/OmYT12wOeU7yFh29L1RHBARXGEilKzEin4/3gXRbFhTFcKLz43ynVcRgjA05YauDBlCxIj3Z3vwuD4FNLc9t4J8uZGvWhYPZYRWc1bQKAEJ2+6s78NlJAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAuAkPiCuF8wFCPg2etDvTf97/xFWYWrAzNNGOH+G3vPGibpF80QOlC6kHG4yXqEHwKO/y3nq6QWaVTXRGYjG/4J/vTt+h9Oe+VJrcBsUZj79KFdAdQ+NFMpIKzNUli/26kUdzrRL3QaCrW/Xd4JjZ0sdCtUyS0VX314p/z9Kvcd0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
